@@ -1,0 +1,15 @@
+25.12.2023 14:00
+Started the project and reading the Intelij documentation.
+
+25.12.2023 14:14
+Initial idea: use IntentionActionWithChoice for each keyword.
+
+25.12.2023 14:22
+Initialize project.
+
+25.12.2023 15:00
+Idea of using IntentionActionWithChoice was abandoned.
+Switched to PsiElementBaseIntentionAction
+
+25.12.2023 15:45
+Implemented POC using PsiElementBaseIntentionAction and PopupChooserBuilder,
