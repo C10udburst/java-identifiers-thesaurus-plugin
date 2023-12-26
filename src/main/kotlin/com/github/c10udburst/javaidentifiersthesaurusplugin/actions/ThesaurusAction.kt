@@ -25,7 +25,6 @@ class ThesaurusAction: PsiElementBaseIntentionAction() {
     }
 
     override fun isAvailable(project: Project, editor: Editor?, element: PsiElement): Boolean {
-        thisLogger().warn("type: ${element.elementType.toString()}")
         if (element !is PsiJavaToken)
             return false
         text = ThesaurusBundle.message("intention.text", element.text)
