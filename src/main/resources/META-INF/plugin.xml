@@ -10,7 +10,55 @@
     <resource-bundle>messages.ThesaurusBundle</resource-bundle>
     <extensions defaultExtensionNs="com.intellij">
 
-        <registryKey defaultValue="provided&#xA;presuming&#xA;assuming&#xA;supposing" description="if synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.IF_KEYWORD" />
+        <registryKey defaultValue="theoretical&#xA;conceptual&#xA;notional" description="ABSTRACT synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.ABSTRACT_KEYWORD" />
+        <registryKey defaultValue="declare&#xA;affirm&#xA;state" description="ASSERT synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.ASSERT_KEYWORD" />
+        <registryKey defaultValue="binary" description="BOOLEAN synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.BOOLEAN_KEYWORD" />
+        <registryKey defaultValue="crack&#xA;fracture" description="BREAK synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.BREAK_KEYWORD" />
+        <registryKey defaultValue="unit&#xA;part&#xA;piece" description="BYTE synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.BYTE_KEYWORD" />
+        <registryKey defaultValue="situation&#xA;condition&#xA;plight" description="CASE synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.CASE_KEYWORD" />
+        <registryKey defaultValue="seize" description="CATCH synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.CATCH_KEYWORD" />
+        <registryKey defaultValue="letter" description="CHAR synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.CHAR_KEYWORD" />
+        <registryKey defaultValue="type" description="CLASS synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.CLASS_KEYWORD" />
+        <registryKey defaultValue="persevere" description="CONTINUE synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.CONTINUE_KEYWORD" />
+        <registryKey defaultValue="normal" description="DEFAULT synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.DEFAULT_KEYWORD" />
+        <registryKey defaultValue="perform" description="DO synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.DO_KEYWORD" />
+        <registryKey defaultValue="dual" description="DOUBLE synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.DOUBLE_KEYWORD" />
+        <registryKey defaultValue="other" description="ELSE synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.ELSE_KEYWORD" />
+        <registryKey defaultValue="catalog" description="ENUM synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.ENUM_KEYWORD" />
+        <registryKey defaultValue="adds" description="EXTENDS synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.EXTENDS_KEYWORD" />
+        <registryKey defaultValue="conclusive" description="FINAL synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.FINAL_KEYWORD" />
+        <registryKey defaultValue="permanently" description="FINALLY synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.FINALLY_KEYWORD" />
+        <registryKey defaultValue="drift" description="FLOAT synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.FLOAT_KEYWORD" />
+        <registryKey defaultValue="toward" description="FOR synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.FOR_KEYWORD" />
+        <registryKey defaultValue="assuming&#xA;providing" description="IF synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.IF_KEYWORD" />
+        <registryKey defaultValue="affects" description="IMPLEMENTS synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.IMPLEMENTS_KEYWORD" />
+        <registryKey defaultValue="relocate" description="IMPORT synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.IMPORT_KEYWORD" />
+        <registryKey defaultValue="mentioning of" description="INSTANCEOF synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.INSTANCEOF_KEYWORD" />
+        <registryKey defaultValue="numeral" description="INT synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.INT_KEYWORD" />
+        <registryKey defaultValue="junction" description="INTERFACE synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.INTERFACE_KEYWORD" />
+        <registryKey defaultValue="extended" description="LONG synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.LONG_KEYWORD" />
+        <registryKey defaultValue="indigenous" description="NATIVE synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.NATIVE_KEYWORD" />
+        <registryKey defaultValue="recent" description="NEW synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.NEW_KEYWORD" />
+        <registryKey defaultValue="nothing" description="NULL synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.NULL_KEYWORD" />
+        <registryKey defaultValue="parcel" description="PACKAGE synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.PACKAGE_KEYWORD" />
+        <registryKey defaultValue="secret" description="PRIVATE synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.PRIVATE_KEYWORD" />
+        <registryKey defaultValue="secured" description="PROTECTED synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.PROTECTED_KEYWORD" />
+        <registryKey defaultValue="communal" description="PUBLIC synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.PUBLIC_KEYWORD" />
+        <registryKey defaultValue="retreat" description="RETURN synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.RETURN_KEYWORD" />
+        <registryKey defaultValue="petite" description="SHORT synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.SHORT_KEYWORD" />
+        <registryKey defaultValue="constant" description="STATIC synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.STATIC_KEYWORD" />
+        <registryKey defaultValue="harsh" description="STRICTFP synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.STRICTFP_KEYWORD" />
+        <registryKey defaultValue="chief" description="SUPER synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.SUPER_KEYWORD" />
+        <registryKey defaultValue="transition" description="SWITCH synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.SWITCH_KEYWORD" />
+        <registryKey defaultValue="coordinated" description="SYNCHRONIZED synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.SYNCHRONIZED_KEYWORD" />
+        <registryKey defaultValue="aforementioned" description="THIS synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.THIS_KEYWORD" />
+        <registryKey defaultValue="toss" description="THROW synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.THROW_KEYWORD" />
+        <registryKey defaultValue="tosses" description="THROWS synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.THROWS_KEYWORD" />
+        <registryKey defaultValue="temporary" description="TRANSIENT synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.TRANSIENT_KEYWORD" />
+        <registryKey defaultValue="sample" description="TRY synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.TRY_KEYWORD" />
+        <registryKey defaultValue="vacant" description="VOID synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.VOID_KEYWORD" />
+        <registryKey defaultValue="unpredictable" description="VOLATILE synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.VOLATILE_KEYWORD" />
+        <registryKey defaultValue="whilst" description="WHILE synonyms" key="com.github.c10udburst.javaidentifiersthesaurus.config.WHILE_KEYWORD" />
         
         <applicationConfigurable
             key="configurable.name"
