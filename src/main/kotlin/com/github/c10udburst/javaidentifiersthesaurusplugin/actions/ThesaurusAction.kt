@@ -1,5 +1,8 @@
 package com.github.c10udburst.javaidentifiersthesaurusplugin.actions
 
+import com.github.c10udburst.javaidentifiersthesaurusplugin.Keywords
+import com.github.c10udburst.javaidentifiersthesaurusplugin.ThesaurusBundle
+import com.github.c10udburst.javaidentifiersthesaurusplugin.config.ThesaurusConfig
 import com.intellij.codeInsight.intention.IntentionAction
 import com.intellij.codeInsight.intention.IntentionActionWithChoice
 import com.intellij.codeInsight.intention.IntentionActionWithOptions
@@ -22,42 +25,46 @@ import com.intellij.ui.components.JBList
 import com.intellij.ui.popup.list.ListPopupImpl
 
 
-abstract class ThesaurusAction: PsiElementBaseIntentionAction() {
+class ThesaurusAction: PsiElementBaseIntentionAction() {
 
-    protected abstract val identifier: String
 
     override fun getFamilyName(): String {
-        return "$identifier thesaurus"
+        return ThesaurusBundle.message("intention.family")
     }
 
     override fun isAvailable(project: Project, editor: Editor?, element: PsiElement): Boolean {
         thisLogger().warn("type: ${element.elementType.toString()}")
         if (element !is PsiJavaToken)
             return false
-        return element.elementType.toString() == identifier
+        text = ThesaurusBundle.message("intention.text", element.text)
+        for (i in Keywords.keywords) {
+            if (element.elementType.toString() == i)
+                return true
+        }
+        return false
     }
 
     override fun invoke(project: Project, editor: Editor?, element: PsiElement) {
         if (IntentionPreviewUtils.isIntentionPreviewActive())
             return
 
-        val jbList = JBList(getOptions())
+        val keyword = element.elementType.toString()
+
+        val options = getOptions(keyword)
+        val jbList = JBList(options)
 
         val builder = PopupChooserBuilder(jbList)
-        builder.setTitle("Choose a synonym")
+        builder.setTitle(ThesaurusBundle.message("intention.window.title"))
         builder.setItemChoosenCallback {
             WriteCommandAction.writeCommandAction(project).run<Throwable> {
-                element.replace(JavaPsiFacade.getElementFactory(project).createIdentifier(getOptions()[jbList.selectedIndex]))
+                element.replace(JavaPsiFacade.getElementFactory(project).createIdentifier(options[jbList.selectedIndex]))
             }
         }
 
         builder.createPopup().showInBestPositionFor(editor!!);
     }
 
-    fun getOptions(): List<String> {
-        return listOf(
-            "synonym1",
-            "synonym2",
-        )
+    private fun getOptions(keyword: String): List<String> {
+        return ThesaurusConfig.INSTANCE.getSynonyms(keyword).split("\n")
     }
 }
