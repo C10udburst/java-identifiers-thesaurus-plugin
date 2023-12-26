@@ -27,3 +27,7 @@ Implement thesaurus for all java keywords.
 
 26.12.2023 11:35
 Miscellaneous code and documentation cleanup.
+
+## [0.0.1] - 2023-12-25
+### Added
+- Initial release
